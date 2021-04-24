@@ -1,0 +1,49 @@
+% workaround since amsthm uses deprecated stuff
+\RequirePackage[undo-recent-deprecations]{expl3}
+
+% workaround if one uses a space in KVoptions
+%\RequirePackage{kvoptions-patch} 
+
+% Specify language you want to use as argument
+% currently supported: ngerman, english
+\documentclass[english]{../uni-def}
+
+% load preamble
+\usepackage{../preamble}
+
+% include short math definitions
+\usepackage{../math-shorthand}
+
+% add further packages here:
+\usepackage{blindtext}
+
+% Configure further options of the "hyperref" package: colored links.
+\hypersetup{%
+	colorlinks=true,%
+	linkcolor=orange,%
+	citecolor=olive,%
+	urlcolor=cyan%
+}
+
+% Setup Values
+\SetupLecture{Example Lecture}
+\SetupSubtitle{An Introduction}
+\SetupAuthor{John Doe}
+\SetupSubject{Summary}
+\SetupDate{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{First Section}
+\begin{defi} 
+Let $X$ be a set.
+\end{defi}
+
+\begin{theorem}
+Ein Satz mit $x$.
+\end{theorem}
+\end{document}

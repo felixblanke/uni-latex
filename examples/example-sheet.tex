@@ -1,0 +1,58 @@
+% workaround since amsthm uses deprecated stuff
+\RequirePackage[undo-recent-deprecations]{expl3}
+
+% workaround if one uses a space in KVoptions
+%\RequirePackage{kvoptions-patch} 
+
+% Specify language you want to use as argument
+% currently supported: ngerman, english
+\documentclass[english]{../uni-sheet}
+
+% load preamble
+\usepackage{../preamble}
+
+% include short math definitions
+\usepackage{../math-shorthand}
+
+% add further packages here:
+\usepackage{blindtext}
+
+% Configure further options of the "hyperref" package: colored links.
+\hypersetup{%
+	colorlinks=true,%
+	linkcolor=orange,%
+	citecolor=olive,%
+	urlcolor=cyan%
+}
+
+% Setup Values
+\SetupLecture{Example Lecture}
+\SetupAuthor[Doe, Doe]{John Doe \and Jane Doe}
+\SetupSubject{Summary}
+\SetupSheetno{0}
+
+\begin{document}
+\maketitle
+
+\ex In the first task we want to show some very nice results.
+\subex Let $T$ be a really difficult task and $s\in\Omega$ a helpless student. Then, $s$ cannot solve $T$ easily.
+\begin{proof}
+The proof is standard.
+\end{proof}
+
+\subex Some long and boring definitions\dots
+\begin{proof}
+\blindtext
+\end{proof}
+
+\exercise{Important Conjecture}
+Let $A$ be from some set $M$ with very special properties. If we assume that some more magic assumptions hold, then we can show that indeed $A$ is pretty cool.
+\begin{proof}
+\blindtext
+\end{proof}
+
+\exercise{Exercise without proof}
+Maybe we have an exercise where using a \verb+proof+ environment might seem odd. In cases like this, we simply don't use it and add some more \verb+\blindtext+ instead\dots
+
+\blindtext
+\end{document}
