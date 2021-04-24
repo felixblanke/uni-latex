@@ -17,6 +17,9 @@ This file provides a LaTeX-class for layouting (solutions to) exercise sheets.
 ### `uni-def.cls`
 This file provides a LaTeX-class for layouting lecture summaries.
 
+### `preamble.sty`
+This file loads a few packages which the author uses regularly.
+
 ### `math-shorthand.sty`
 This file provides shorthand definitions for regularly used math expressions.
 
