@@ -1,6 +1,6 @@
 # Uni-LaTeX
 
-This projects contains LaTeX-class files used to layout documents for different modules.
+This projects contains LaTeX-class files used to layout documents for different university lectures.
 
 ## Usage
 This repository is intended to be included as a submodule into other repositories/projects. The intended file system structure is
