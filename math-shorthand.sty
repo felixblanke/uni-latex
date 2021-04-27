@@ -12,8 +12,9 @@
 \newcommand*{\R}{\mathbb{R}}
 \newcommand*{\K}{\mathbb{K}}
 \newcommand*{\F}{\mathbb{F}}
-\newcommand*{\C}{\mathbb{C}}
-%\renewcommand*{\C}{\mathbb{C}} % might be necessary, if \C is already defined
+% define \C, no matter if it exists or not. (It usually used for accents in languages I don't use)
+\providecommand*{\C}{\mathbb{C}}
+\renewcommand*{\C}{\mathbb{C}}
 
 \newcommand*{\compl}{^\textsf{C}}
 \DeclareMathOperator*{\argmax}{arg\,max}
