@@ -60,15 +60,10 @@
   \RequirePackage[utf8]{inputenc}% Input-Encoding UTF-8
   \RequirePackage[T1]{fontenc}   % Font-Encoding
   \RequirePackage{textcomp,tgpagella}
-\else\ifLuaTeX
-  \wlog{LuaLaTeX detected}
+\else
   \RequirePackage{fontspec}
   \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
-\else\ifXeTeX
-  \wlog{XeLaTeX detected}
-  \RequirePackage{fontspec}
-  \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
-\fi\fi\fi
+\fi
 
 \RequirePackage{babel}%          %localisation
 
