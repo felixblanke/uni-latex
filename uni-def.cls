@@ -59,10 +59,42 @@
   \wlog{PDF LaTeX detected}
   \RequirePackage[utf8]{inputenc}% Input-Encoding UTF-8
   \RequirePackage[T1]{fontenc}   % Font-Encoding
-  \RequirePackage{textcomp,tgpagella}
+  \RequirePackage{libertinus}    % use libertinus fonts
 \else
   \RequirePackage{fontspec}
-  \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+  \RequirePackage{unicode-math}
+
+  \setmainfont[
+    Ligatures   = TeX,
+    Numbers     = OldStyle,
+    Contextuals = Alternate
+  ]{Libertinus Serif}
+  \setsansfont[
+    Ligatures   = TeX,
+    Numbers     = OldStyle,
+    Contextuals = Alternate
+  ]{Libertinus Sans}
+  \setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
+  \setmathfont{Libertinus Math}
+  % Set the text main font to Libertinus Serif via "fontspec".
+  % Set the sans main font to Libertinus Sans.
+  % Set the math font to Libertinus Math.
+  % Enables text figures, fancy "Qu" (contextual alternates).
+  % Ensures that -- is translated into an endash (TeX ligature).
+
+  \newfontfamily{\headingfont}{Libertinus Sans}[
+    Ligatures     = TeX,
+    Numbers       = OldStyle,
+    Contextuals   = Alternate,
+    StylisticSet  = 6
+  ]
+  \addtokomafont{disposition}{\headingfont}
+  % Fancy version of Libertinus Sans for headings,
+  % using text figures, fancy ampersand (ss06).
+
+  \newfontfamily{\rmlffamily}{Libertinus Serif}
+  \newfontfamily{\sflffamily}{Libertinus Sans}
+  % Makes it possible to disable text figures.
 \fi
 
 \RequirePackage{babel}%          %localisation
