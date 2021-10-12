@@ -99,10 +99,6 @@
 
 \RequirePackage{babel}%         % localisation
 
-\RequirePackage{microtype}%     % improved micro-typography
-
-\RequirePackage{csquotes}%      % typographically correct quotation marks
-
 \RequirePackage{amsthm}%        % theorem environments etc.
 \RequirePackage{xparse}%        % allows improved definition of commands
 

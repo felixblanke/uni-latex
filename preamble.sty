@@ -25,12 +25,26 @@ official%                       %     %Felix: Argument war Teil des Ursprungspak
 
 \RequirePackage{soul}           % Unter- und Durchstreichen von Text-Passagen
 
-\RequirePackage[%               % Text-Färbung:
-    dvipsnames%                 %     Gibt mehr Farben einen Namen
+\RequirePackage[%               % colors
+    dvipsnames%                 %     gives more colors names
 ]{xcolor}
 
+\RequirePackage[hidelinks,breaklinks]{hyperref}
 
-\RequirePackage{hyperref}       % Verlinkung (sowohl im Dokument als auch Hyperlinks)
+% Uni Bonn Farben
+\definecolor{ub-blue}{cmyk}{1,0.7,0,0}
+\definecolor{ub-yellow}{cmyk}{0,0.3,1,0}
+\definecolor{ub-gray}{cmyk}{0,0,0.15,0.55}
+
+\hypersetup{colorlinks=true,
+            linkcolor=black,
+            filecolor=black,
+            urlcolor=ub-blue,
+            citecolor=ub-blue,
+            bookmarksnumbered=true
+            }
+
+
 
 \renewcommand*\url[1]{\href{https://#1}{\nolinkurl{#1}}}
 % The original command does not work when #1 does not begin with "www".
