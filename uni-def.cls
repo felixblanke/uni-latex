@@ -2,7 +2,7 @@
 %% IDENTIFICATION
 %%
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uni-latex/uni-def}[2021-04-25 Class for layouting summaries of lectures]
+\ProvidesClass{uni-latex/uni-def}[Class for layouting summaries of lectures]
 
 %%
 %% OPTIONS
@@ -97,13 +97,17 @@
   % Makes it possible to disable text figures.
 \fi
 
-\RequirePackage{babel}%          %localisation
+\RequirePackage{babel}%         % localisation
 
-\RequirePackage{amsthm}%        % Matheumgebungen wie theorem oder proof
-\RequirePackage{xparse}%        % Verbesserte Definition von Befehlen
+\RequirePackage{microtype}%     % improved micro-typography
 
-\RequirePackage[%               % bessere Aufzählungen
-    shortlabels%                %     erlaubt Kurzschreibweise der Labels an Aufzählungen
+\RequirePackage{csquotes}%      % typographically correct quotation marks
+
+\RequirePackage{amsthm}%        % theorem environments etc.
+\RequirePackage{xparse}%        % allows improved definition of commands
+
+\RequirePackage[%               % improved enumerations etc.
+    shortlabels%                %     allows shorthand notation
 ]{enumitem}
 
 %%
@@ -153,7 +157,7 @@
 }%
 
 \ifUNI@draft
-    % Entwurfs-Wasserzeichen
+    % draft watermark
     \RequirePackage{draftwatermark}
     \SetWatermarkText{Entwurf}
 
@@ -161,9 +165,9 @@
     \KOMAoptions{draft}
 \fi
 
-% Hier eingebunden, da die KOMAoption "draft" überschrieben werden muss
-\RequirePackage[%               % Kopf- und Fußzeilen.
-    draft=false%                % Verhindert das Anzeigen von "Entwurfs-Informationen"
+% loaded here to overwrite KOMAoption "draft"
+\RequirePackage[%               % headers and footers
+    draft=false%                % don't show draft info in header/footer
 ]{scrlayer-scrpage}
 
 %%
@@ -174,8 +178,8 @@
 label=(\roman*)%
 }
 
-% use French spacing
-\bbl@frenchspacing
+% use French spacing, i.e. no additional space after periods that end sentences.
+\frenchspacing
 
 % Theoremstyles
 \theoremstyle{definition}
@@ -189,7 +193,7 @@ label=(\roman*)%
 \newtheorem{cor}[defi]{\UNI@corollaryname}
 
 \theoremstyle{remark}
-\newtheorem*{remark}{\UNI@remarkname} %Kein Zähler
+\newtheorem*{remark}{\UNI@remarkname} %No counter
 
 %%
 %% Title
