@@ -1,6 +1,3 @@
-% workaround since amsthm uses deprecated stuff
-\RequirePackage[undo-recent-deprecations]{expl3}
-
 % workaround if one uses a space in KVoptions
 %\RequirePackage{kvoptions-patch} 
 
@@ -18,17 +15,17 @@
 \usepackage{blindtext}
 
 % Configure further options of the "hyperref" package: colored links.
-\hypersetup{%
-	colorlinks=true,%
-	linkcolor=orange,%
-	citecolor=olive,%
-	urlcolor=cyan%
-}
+% \hypersetup{%
+% 	colorlinks=true,%
+% 	linkcolor=orange,%
+% 	citecolor=olive,%
+% 	urlcolor=cyan%
+% }
 
 % Setup Values
 \SetupLecture{Example Lecture}
 \SetupSubtitle{An Introduction}
-\SetupAuthor{John Doe}
+\SetupAuthor[Doe]{John Doe}
 \SetupSubject{Summary}
 \SetupDate{\today}
 
@@ -44,6 +41,10 @@ Let $X$ be a set.
 \end{defi}
 
 \begin{theorem}
-Ein Satz mit $x$.
+A very important theorem.
 \end{theorem}
+\begin{proof}
+    This is a very conclusive proof.
+\end{proof}
+
 \end{document}
