@@ -219,7 +219,6 @@ tocstyle=section          %
 \pagestyle{scrheadings}
 \KOMAoptions{headsepline=true}
 
-
 \AtBeginDocument{
   \subject{\UNI@subject}
   \title{\UNI@lecture}

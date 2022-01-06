@@ -208,8 +208,11 @@ label=(\roman*)%
 \newcommand* \SetupSubject [1] {
   \setkeys{UNI}{subject={#1}}
 }
-\newcommand* \SetupDate [1] {
-  \setkeys{UNI}{date={#1}}
+\NewDocumentCommand \SetupDate {o m}{
+  \IfValueT {#1} {%
+    \renewcaptionname{\languagename}{\UNI@dateprefix}{#1}%
+  }
+  \setkeys{UNI}{date={#2}}
 }
 
 \pagestyle{scrheadings}
